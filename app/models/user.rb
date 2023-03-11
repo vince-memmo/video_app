@@ -1,6 +1,6 @@
 class User < ApplicationRecord
     before_validation :ensure_session_token
-    has_secure_password
+    # has_secure_password
     validates :username, uniqueness: true, length: { in:3..30}
     validates :password, length: { in:3..30}
     validates :session_token, presence: true, uniqueness: true

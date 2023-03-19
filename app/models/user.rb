@@ -6,7 +6,6 @@ class User < ApplicationRecord
     validates :session_token, presence: true, uniqueness: true
 
     def self.find_by_credentials(username, password)
-        # debugger
         @user = User.find_by(username: username)
         if @user && @user[:password] == password
           @user

@@ -22,9 +22,6 @@ class ApplicationController < ActionController::API
         @current_user = nil
     end
 
-def huntr
-    
-end
 
     def logged_in?
         !!current_user
